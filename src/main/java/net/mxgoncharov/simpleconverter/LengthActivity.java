@@ -51,32 +51,7 @@ public class LengthActivity extends Activity {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                switch (position){
-                    case 0:
-                        spinnerSelectedPos = position;
-                        break;
-                    case 1:
-                        spinnerSelectedPos = position;
-                        break;
-                    case 2:
-                        spinnerSelectedPos = position;
-                        break;
-                    case 3:
-                        spinnerSelectedPos = position;
-                        break;
-                    case 4:
-                        spinnerSelectedPos = position;
-                        break;
-                    case 5:
-                        spinnerSelectedPos = position;
-                        break;
-                    case 6:
-                        spinnerSelectedPos = position;
-                        break;
-                    case 7:
-                        spinnerSelectedPos = position;
-                        break;
-                }
+                spinnerSelectedPos = position;
             }
 
             @Override
