@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Simple Converter</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="mainLabel">Select converter</string>
+
+    <string-array name="listItem">
+        <item>Length</item>
+        <item>Weight</item>
+        <item>Temperature</item>
+        <item>Memory</item>
+        <item>About</item>
+    </string-array>
+
+    <string name="title_activity_length">Length Converter</string>
+    <string name="title_activity_weight">Weight Converter</string>
+    <string name="title_activity_temperature">Temperature Converter</string>
+    <string name="title_activity_memory">Memory Converter</string>
+    <string name="title_activity_about">About page</string>
+
+</resources>
