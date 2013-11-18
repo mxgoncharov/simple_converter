@@ -29,8 +29,8 @@ public class MainActivity extends Activity {
 
             new AlertDialog.Builder(this)
 
-                    .setTitle("Hello World!")
-                    .setMessage("Thanks for downloading my app")
+                    .setTitle("Attention!")
+                    .setMessage("Current version of converter is 1.0. In next release we will add new values and converters. Also app will get localisation to Russian and Italian.")
 
                     .setNeutralButton("Okay", null).show();
 
