@@ -15,6 +15,11 @@ public class TemperatureActivity extends Activity {
 
     private int spinnerSelectedPos = 0;
 
+    //Vars for results
+    double c;
+    double f;
+    double k;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,32 +73,27 @@ public class TemperatureActivity extends Activity {
 
                     final double inputDouble = Double.parseDouble(inputString);
 
-                    //Vars for results
-                    final double[] c = new double[1];
-                    final double[] f = new double[1];
-                    final double[] k = new double[1];
-
                     switch (spinnerSelectedPos){
                         case 0:
-                            c[0] = inputDouble;    //This value is selected
-                            f[0] = (inputDouble * 9 / 5) + 32;
-                            k[0] = inputDouble + 273.15;
+                            c = inputDouble;    //This value is selected
+                            f = (inputDouble * 9 / 5) + 32;
+                            k = inputDouble + 273.15;
                             break;
                         case 1:
-                            c[0] = (inputDouble - 32) * 5 / 9;
-                            f[0] = inputDouble;  //This value is selected
-                            k[0] = ((inputDouble - 32) / 1.800) + 273.15;
+                            c = (inputDouble - 32) * 5 / 9;
+                            f = inputDouble;  //This value is selected
+                            k = ((inputDouble - 32) / 1.800) + 273.15;
                             break;
                         case 2:
-                            c[0] = inputDouble - 273.15;
-                            f[0] = (inputDouble - 273.15) * 1.8000 + 32.00 ;
-                            k[0] = inputDouble;   //This value is selected
+                            c = inputDouble - 273.15;
+                            f = (inputDouble - 273.15) * 1.8000 + 32.00 ;
+                            k = inputDouble;   //This value is selected
                             break;
                     }
 
-                    resultC.setText(String.valueOf(c[0]));
-                    resultF.setText(String.valueOf(f[0]));
-                    resultK.setText(String.valueOf(k[0]));
+                    resultC.setText(String.valueOf(c));
+                    resultF.setText(String.valueOf(f));
+                    resultK.setText(String.valueOf(k));
                 }
                 else {
                     Toast.makeText(TemperatureActivity.this, "Input field is empty. Type something to convert.", Toast.LENGTH_SHORT).show();

@@ -15,6 +15,15 @@ public class LengthActivity extends Activity {
 
     private int spinnerSelectedPos = 0;
 
+    double cm;
+    double ft;
+    double in;
+    double km;
+    double m;
+    double min;
+    double mile;
+    double mm;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,107 +80,97 @@ public class LengthActivity extends Activity {
 
                     final double inputDouble = Double.parseDouble(inputString);
 
-                    //Vars for results
-                    final double[] cm = new double[1];
-                    final double[] ft = new double[1];
-                    final double[] in = new double[1];
-                    final double[] km = new double[1];
-                    final double[] m = new double[1];
-                    final double[] min = new double[1];
-                    final double[] mile = new double[1];
-                    final double[] mm = new double[1];
-
                     switch (spinnerSelectedPos){
                         case 0:
-                                    cm[0] = inputDouble;    //This value is selected
-                                    ft[0] = inputDouble * 0.032808399;
-                                    in[0] = inputDouble * 0.393700787;
-                                    km[0] = inputDouble * 0.00001;
-                                    m[0] = inputDouble * 0.001;
-                                    min[0] = inputDouble * 393700.787;
-                                    mile[0] = inputDouble * 0.0000062137;
-                                    mm[0] = inputDouble * 10;
+                            cm = inputDouble;    //This value is selected
+                            ft = inputDouble * 0.032808399;
+                            in = inputDouble * 0.393700787;
+                            km = inputDouble * 0.00001;
+                            m = inputDouble * 0.001;
+                            min = inputDouble * 393700.787;
+                            mile = inputDouble * 0.0000062137;
+                            mm = inputDouble * 10;
                             break;
                         case 1:
-                                    cm[0] = inputDouble * 30.48;
-                                    ft[0] = inputDouble;    //This value is selected
-                                    in[0] = inputDouble * 12;
-                                    km[0] = inputDouble * 0.0003048;
-                                    m[0] = inputDouble * 0.3048;
-                                    min[0] = inputDouble * 12000000;
-                                    mile[0] = inputDouble * 0.000189393939;
-                                    mm[0] = inputDouble * 304.8;
+                            cm = inputDouble * 30.48;
+                            ft = inputDouble;    //This value is selected
+                            in = inputDouble * 12;
+                            km = inputDouble * 0.0003048;
+                            m = inputDouble * 0.3048;
+                            min = inputDouble * 12000000;
+                            mile = inputDouble * 0.000189393939;
+                            mm = inputDouble * 304.8;
                             break;
                         case 2:
-                                    cm[0] = inputDouble * 2.54;
-                                    ft[0] = inputDouble * 0.0833333333;
-                                    in[0] = inputDouble;    //This value is selected
-                                    km[0] = inputDouble * 0.000025400;
-                                    m[0] = inputDouble * 0.0254;
-                                    min[0] = inputDouble * 1000000;
-                                    mile[0] = inputDouble * 0.0000157828;
-                                    mm[0] = inputDouble * 25.4;
+                            cm = inputDouble * 2.54;
+                            ft = inputDouble * 0.0833333333;
+                            in = inputDouble;    //This value is selected
+                            km = inputDouble * 0.000025400;
+                            m = inputDouble * 0.0254;
+                            min = inputDouble * 1000000;
+                            mile = inputDouble * 0.0000157828;
+                            mm = inputDouble * 25.4;
                             break;
                         case 3:
-                                    cm[0] = inputDouble * 100000;
-                                    ft[0] = inputDouble * 3280.8399;
-                                    in[0] = inputDouble * 39370.0787;
-                                    km[0] = inputDouble;   //This value is selected
-                                    m[0] = inputDouble * 1000;
-                                    min[0] = inputDouble * 39370078740.0;
-                                    mile[0] = inputDouble * 0.621371192;
-                                    mm[0] = inputDouble * 1000000;
+                            cm = inputDouble * 100000;
+                            ft = inputDouble * 3280.8399;
+                            in = inputDouble * 39370.0787;
+                            km = inputDouble;   //This value is selected
+                            m = inputDouble * 1000;
+                            min = inputDouble * 39370078740.0;
+                            mile = inputDouble * 0.621371192;
+                            mm = inputDouble * 1000000;
                             break;
                         case 4:
-                                    cm[0] = inputDouble * 100;
-                                    ft[0] = inputDouble * 3.2808399;
-                                    in[0] = inputDouble * 39.3700787;
-                                    km[0] = inputDouble * 0.001;
-                                    m[0] = inputDouble;  //This value is selected
-                                    min[0] = inputDouble * 39370078.74;
-                                    mile[0] = inputDouble * 0.000621371192;
-                                    mm[0] = inputDouble * 1000;
+                            cm = inputDouble * 100;
+                            ft = inputDouble * 3.2808399;
+                            in = inputDouble * 3900787;
+                            km = inputDouble * 0.001;
+                            m = inputDouble;  //This value is selected
+                            min = inputDouble * 39370078.74;
+                            mile = inputDouble * 0.000621371192;
+                            mm = inputDouble * 1000;
                             break;
                         case 5:
-                                    cm[0] = inputDouble * 0.0000025400;
-                                    ft[0] = inputDouble * 0.00000008;
-                                    in[0] = inputDouble * 0.0000010000;
-                                    km[0] = inputDouble * 0.025400000;
-                                    m[0] = inputDouble * 0.0000000254;
-                                    min[0] = inputDouble;   //This value is selected
-                                    mile[0] = inputDouble * 0.00000000001578282828;
-                                    mm[0] = inputDouble * 0.000025400;
+                            cm = inputDouble * 0.0000025400;
+                            ft = inputDouble * 0.00000008;
+                            in = inputDouble * 0.0000010000;
+                            km = inputDouble * 0.025400000;
+                            m = inputDouble * 0.0000000254;
+                            min = inputDouble;   //This value is selected
+                            mile = inputDouble * 0.00000000001578282828;
+                            mm = inputDouble * 0.000025400;
                             break;
                         case 6:
-                                    cm[0] = inputDouble * 160934.4;
-                                    ft[0] = inputDouble * 5280;
-                                    in[0] = inputDouble * 63360;
-                                    km[0] = inputDouble * 1.609344;
-                                    m[0] = inputDouble * 1609.344;
-                                    min[0] = inputDouble * 63360000000.0;
-                                    mile[0] = inputDouble; //This value is selected
-                                    mm[0] = inputDouble * 0.000025400;
+                            cm = inputDouble * 160934.4;
+                            ft = inputDouble * 5280;
+                            in = inputDouble * 63360;
+                            km = inputDouble * 1.609344;
+                            m = inputDouble * 1609.344;
+                            min = inputDouble * 63360000000.0;
+                            mile = inputDouble; //This value is selected
+                            mm = inputDouble * 0.000025400;
                             break;
                         case 7:
-                                    cm[0] = inputDouble * 0.1;
-                                    ft[0] = inputDouble * 0.0032808399;
-                                    in[0] = inputDouble * 0.0393700787;
-                                    km[0] = inputDouble * 0.0000010000;
-                                    m[0] = inputDouble * 0.001;
-                                    min[0] = inputDouble * 39370;
-                                    mile[0] = inputDouble * 0.000000621371;
-                                    mm[0] = inputDouble; //This value is selected
+                            cm = inputDouble * 0.1;
+                            ft = inputDouble * 0.0032808399;
+                            in = inputDouble * 0.0393700787;
+                            km = inputDouble * 0.0000010000;
+                            m = inputDouble * 0.001;
+                            min = inputDouble * 39370;
+                            mile = inputDouble * 0.000000621371;
+                            mm = inputDouble; //This value is selected
                             break;
                     }
 
-                    resultCM.setText(String.valueOf(cm[0]));
-                    resultFT.setText(String.valueOf(ft[0]));
-                    resultIN.setText(String.valueOf(in[0]));
-                    resultKM.setText(String.valueOf(km[0]));
-                    resultM.setText(String.valueOf(m[0]));
-                    resultMIN.setText(String.valueOf(min[0]));
-                    resultMile.setText(String.valueOf(mile[0]));
-                    resultMM.setText(String.valueOf(mm[0]));
+                    resultCM.setText(String.valueOf(cm));
+                    resultFT.setText(String.valueOf(ft));
+                    resultIN.setText(String.valueOf(in));
+                    resultKM.setText(String.valueOf(km));
+                    resultM.setText(String.valueOf(m));
+                    resultMIN.setText(String.valueOf(min));
+                    resultMile.setText(String.valueOf(mile));
+                    resultMM.setText(String.valueOf(mm));
                 }
                 else {
                     Toast.makeText(LengthActivity.this, "Input field is empty. Type something to convert.", Toast.LENGTH_SHORT).show();

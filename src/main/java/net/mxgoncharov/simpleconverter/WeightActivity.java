@@ -15,6 +15,15 @@ public class WeightActivity extends Activity {
 
     private int spinnerSelectedPos = 0;
 
+    //Vars for results
+    double cg;
+    double g;
+    double kg;
+    double lb;
+    double mg;
+    double oz;
+    double tonne;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,88 +80,79 @@ public class WeightActivity extends Activity {
 
                     final double inputDouble = Double.parseDouble(inputString);
 
-                    //Vars for results
-                    final double[] cg = new double[1];
-                    final double[] g = new double[1];
-                    final double[] kg = new double[1];
-                    final double[] lb = new double[1];
-                    final double[] mg = new double[1];
-                    final double[] oz = new double[1];
-                    final double[] tonne = new double[1];
-
                     switch (spinnerSelectedPos){
                         case 0:
-                            cg[0] = inputDouble;    //This value is selected
-                            g[0] = inputDouble * 0.01;
-                            kg[0] = inputDouble * 0.00001;
-                            lb[0] = inputDouble * 0.000022046226218;
-                            mg[0] = inputDouble * 10;
-                            oz[0] = inputDouble * 0.0003527396195;
-                            tonne[0] = inputDouble * 0.000000010;
+                            cg = inputDouble;    //This value is selected
+                            g = inputDouble * 0.01;
+                            kg = inputDouble * 0.00001;
+                            lb = inputDouble * 0.000022046226218;
+                            mg = inputDouble * 10;
+                            oz = inputDouble * 0.0003527396195;
+                            tonne = inputDouble * 0.000000010;
                             break;
                         case 1:
-                            cg[0] = inputDouble * 100;
-                            g[0] = inputDouble; //This value is selected
-                            kg[0] = inputDouble * 0.001;
-                            lb[0] = inputDouble * 0.0022046226218;
-                            mg[0] = inputDouble * 1000;
-                            oz[0] = inputDouble * 0.03527396195;
-                            tonne[0] = inputDouble * 0.000001;
+                            cg = inputDouble * 100;
+                            g = inputDouble; //This value is selected
+                            kg = inputDouble * 0.001;
+                            lb = inputDouble * 0.0022046226218;
+                            mg = inputDouble * 1000;
+                            oz = inputDouble * 0.03527396195;
+                            tonne = inputDouble * 0.000001;
                             break;
                         case 2:
-                            cg[0] = inputDouble * 100000;
-                            g[0] = inputDouble * 1000;
-                            kg[0] = inputDouble;    //This value is selected
-                            lb[0] = inputDouble * 2.2046226218;
-                            mg[0] = inputDouble * 1000000 ;
-                            oz[0] = inputDouble * 35.27396195;
-                            tonne[0] = inputDouble * 0.001;
+                            cg = inputDouble * 100000;
+                            g = inputDouble * 1000;
+                            kg = inputDouble;    //This value is selected
+                            lb = inputDouble * 2.2046226218;
+                            mg = inputDouble * 1000000 ;
+                            oz = inputDouble * 35.27396195;
+                            tonne = inputDouble * 0.001;
                             break;
                         case 3:
-                            cg[0] = inputDouble * 45359.237;
-                            g[0] = inputDouble * 453.59237;
-                            kg[0] = inputDouble * 0.45359237;
-                            lb[0] = inputDouble;    //This value is selected
-                            mg[0] = inputDouble * 453592.37;
-                            oz[0] = inputDouble * 16;
-                            tonne[0] = inputDouble * 0.00045359237;
+                            cg = inputDouble * 45359.237;
+                            g = inputDouble * 453.59237;
+                            kg = inputDouble * 0.45359237;
+                            lb = inputDouble;    //This value is selected
+                            mg = inputDouble * 453592.37;
+                            oz = inputDouble * 16;
+                            tonne = inputDouble * 0.00045359237;
                             break;
                         case 4:
-                            cg[0] = inputDouble * 0.1;
-                            g[0] = inputDouble * 0.001;
-                            kg[0] = inputDouble * 0.000001;
-                            lb[0] = inputDouble * 0.0000022046226218;
-                            mg[0] = inputDouble;    //This value is selected
-                            oz[0] = inputDouble * 0.00003527396195;
-                            tonne[0] = inputDouble * 1.0e-9;
+                            cg = inputDouble * 0.1;
+                            g = inputDouble * 0.001;
+                            kg = inputDouble * 0.000001;
+                            lb = inputDouble * 0.0000022046226218;
+                            mg = inputDouble;    //This value is selected
+                            oz = inputDouble * 0.00003527396195;
+                            tonne = inputDouble * 1.0e-9;
                             break;
                         case 5:
-                            cg[0] = inputDouble * 2834.9523125;
-                            g[0] = inputDouble * 28.349523125;
-                            kg[0] = inputDouble * 0.028349523125;
-                            lb[0] = inputDouble * 0.0625;
-                            mg[0] = inputDouble * 28349.523125;
-                            oz[0] = inputDouble;    //This value is selected
-                            tonne[0] = inputDouble * 0.000028349523125;
+                            cg = inputDouble * 2834.9523125;
+                            g = inputDouble * 28.349523125;
+                            kg = inputDouble * 0.028349523125;
+                            lb = inputDouble * 0.0625;
+                            mg = inputDouble * 28349.523125;
+                            oz = inputDouble;    //This value is selected
+                            tonne = inputDouble * 0.000028349523125;
                             break;
                         case 6:
-                            cg[0] = inputDouble * 100000000;
-                            g[0] = inputDouble * 1000000;
-                            kg[0] = inputDouble * 1000;
-                            lb[0] = inputDouble * 2204.6226218;
-                            mg[0] = inputDouble * 1000000000;
-                            oz[0] = inputDouble * 35273.96195 ;
-                            tonne[0] = inputDouble; //This value is selected
+                            cg = inputDouble * 100000000;
+                            g = inputDouble * 1000000;
+                            kg = inputDouble * 1000;
+                            lb = inputDouble * 2204.6226218;
+                            mg = inputDouble * 1000000000;
+                            oz = inputDouble * 35273.96195 ;
+                            tonne = inputDouble; //This value is selected
                             break;
                     }
 
-                    resultCG.setText(String.valueOf(cg[0]));
-                    resultG.setText(String.valueOf(g[0]));
-                    resultKG.setText(String.valueOf(kg[0]));
-                    resultLB.setText(String.valueOf(lb[0]));
-                    resultMG.setText(String.valueOf(mg[0]));
-                    resultOZ.setText(String.valueOf(oz[0]));
-                    resultT.setText(String.valueOf(tonne[0]));
+                    resultCG.setText(String.valueOf(cg));
+                    resultG.setText(String.valueOf(g));
+                    resultKG.setText(String.valueOf(kg));
+                    resultLB.setText(String.valueOf(lb));
+                    resultMG.setText(String.valueOf(mg));
+                    resultOZ.setText(String.valueOf(oz));
+                    resultT.setText(String.valueOf(tonne));
 
                 }
                 else {
